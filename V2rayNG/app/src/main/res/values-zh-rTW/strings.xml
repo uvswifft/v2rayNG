@@ -160,6 +160,9 @@
     <string name="title_pref_is_booted">開機時自動連線</string>
     <string name="summary_pref_is_booted">開機時自動連線選擇的伺服器，可能會不成功</string>
 
+    <string name="subscription_updater_job_tips">任務將在背景運行，在通知中會顯示進度資訊</string>
+    <string name="title_pref_auto_test_after_update_subscription">更新訂閱後自動測試</string>
+    <string name="summary_pref_auto_test_after_update_subscription">自動測試需要比較長的時間，請耐心等待</string>
     <string name="title_pref_auto_remove_invalid_after_test">測試後自動刪除無效配置</string>
     <string name="summary_pref_auto_remove_invalid_after_test">測試結果可能不準確且已刪除的配置無法復原</string>
     <string name="title_pref_auto_sort_after_test">測試後自動排序</string>
@@ -242,8 +245,6 @@
     <string name="title_pref_confirm_remove">刪除設定檔確認</string>
     <string name="summary_pref_confirm_remove">刪除設定檔是否需要用戶二次確認</string>
 
-    <string name="title_pref_start_scan_immediate">立即啟動掃碼</string>
-    <string name="summary_pref_start_scan_immediate">啟動時立即打開相機掃描，否則可在工具欄選擇掃碼或選照片</string>
 
     <string name="title_pref_append_http_proxy">追加 HTTP 代理至 VPN</string>
     <string name="summary_pref_append_http_proxy">瀏覽器 / 一些支援的應用 將直接使用 HTTP 代理, 而不經過虛擬網卡設備 (Android 10+)</string>
@@ -314,6 +315,7 @@
     <string name="sub_setting_pre_profile_tip">请确保設定檔别名存在并唯一</string>
     <string name="toast_invalid_update_interval">更新間隔無效，最小值為 15 分鐘。</string>
     <string name="title_sub_update">更新訂閱</string>
+    <string name="title_ping_all_server">偵測設定 Tcping</string>
     <string name="title_real_ping_all_server">偵測設定真延遲</string>
     <string name="title_user_asset_setting">資源檔案</string>
     <string name="title_sort_by_test_results">依偵測結果排序</string>
@@ -399,6 +401,8 @@
     <string name="title_policy_group_type">策略群組類型</string>
     <string name="title_policy_group_subscription_id">來自訂閱分組</string>
     <string name="title_policy_group_subscription_filter">別名正規過濾</string>
+    <string name="title_policy_group_test_outbounds">測試出口</string>
+    <string name="title_policy_group_fallback">備用出口（選填）</string>
     <string name="server_proxy_chain_members">代理鏈成員</string>
     <string name="server_proxy_chain_pick_members">點此選擇成員</string>
     <string name="server_proxy_chain_member_unselected">請選擇成員</string>

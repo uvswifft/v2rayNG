@@ -21,8 +21,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
@@ -41,6 +43,37 @@ fun PreferenceGroupHeader(title: String, modifier: Modifier = Modifier) {
 }
 
 @Composable
+fun CollapsiblePreferenceGroupHeader(
+    title: String,
+    expanded: Boolean,
+    onExpandedChange: (Boolean) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .clickable { onExpandedChange(!expanded) }
+            .padding(horizontal = 16.dp, vertical = 12.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(
+            text = title,
+            style = MaterialTheme.typography.titleSmall,
+            color = colorFabActive,
+            modifier = Modifier.weight(1f)
+        )
+        Icon(
+            painter = painterResource(R.drawable.ic_expand_more_24dp),
+            contentDescription = null,
+            tint = colorFabActive,
+            modifier = Modifier
+                .size(24.dp)
+                .rotate(if (expanded) 180f else 0f)
+        )
+    }
+}
+
+@Composable
 private fun SettingsItemRow(
     icon: Painter?,
     title: String,
@@ -50,8 +83,10 @@ private fun SettingsItemRow(
     modifier: Modifier = Modifier,
     trailing: @Composable (() -> Unit)? = null
 ) {
-    val contentColor = if (enabled) MaterialTheme.colorScheme.onSurface
-    else MaterialTheme.colorScheme.onSurfaceVariant
+    val titleColor = if (enabled) MaterialTheme.colorScheme.onSurface
+    else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.38f)
+    val descriptionColor = if (enabled) MaterialTheme.colorScheme.onSurfaceVariant
+    else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.38f)
 
     Row(
         modifier = modifier
@@ -65,7 +100,7 @@ private fun SettingsItemRow(
                 painter = icon,
                 contentDescription = null,
                 modifier = Modifier.size(24.dp),
-                tint = contentColor
+                tint = titleColor
             )
             Spacer(modifier = Modifier.width(16.dp))
         }
@@ -73,14 +108,14 @@ private fun SettingsItemRow(
             Text(
                 text = title,
                 style = MaterialTheme.typography.bodyLarge,
-                color = contentColor
+                color = titleColor
             )
             if (!description.isNullOrEmpty()) {
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
                     text = description,
                     style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                    color = descriptionColor
                 )
             }
         }
@@ -111,7 +146,9 @@ fun SettingsEditItem(
         title = title,
         description = description,
         enabled = enabled,
-        onClick = if (enabled) { { showDialog = true } } else null,
+        onClick = if (enabled) {
+            { showDialog = true }
+        } else null,
         modifier = modifier
     )
 
@@ -155,7 +192,9 @@ fun SettingsListItem(
         title = title,
         description = summary.ifEmpty { null },
         enabled = enabled,
-        onClick = if (enabled) { { showDialog = true } } else null,
+        onClick = if (enabled) {
+            { showDialog = true }
+        } else null,
         modifier = modifier
     )
 
@@ -207,7 +246,9 @@ fun SettingsSwitchItem(
         title = title,
         description = summary,
         enabled = enabled,
-        onClick = if (enabled) { { onCheckedChange(!checked) } } else null,
+        onClick = if (enabled) {
+            { onCheckedChange(!checked) }
+        } else null,
         modifier = modifier,
         trailing = {
             Switch(

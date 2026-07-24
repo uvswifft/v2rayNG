@@ -161,6 +161,9 @@
     <string name="title_pref_is_booted">开机时自动连接</string>
     <string name="summary_pref_is_booted">开机时自动连接选择的服务器，可能会不成功</string>
 
+    <string name="subscription_updater_job_tips">任务将在后台运行，在通知中会显示进度信息</string>
+    <string name="title_pref_auto_test_after_update_subscription">更新订阅后自动测试</string>
+    <string name="summary_pref_auto_test_after_update_subscription">自动测试需要比较长的时间，请耐心等待</string>
     <string name="title_pref_auto_remove_invalid_after_test">测试后自动删除无效配置</string>
     <string name="summary_pref_auto_remove_invalid_after_test">测试结果可能不准确且已删除的配置无法恢复</string>
     <string name="title_pref_auto_sort_after_test">测试后自动排序</string>
@@ -243,8 +246,6 @@
     <string name="title_pref_confirm_remove">删除配置确认</string>
     <string name="summary_pref_confirm_remove">删除配置是否需要用户二次确认</string>
 
-    <string name="title_pref_start_scan_immediate">立即启动扫码</string>
-    <string name="summary_pref_start_scan_immediate">启动时立即打开相机扫描，否则可在工具栏选择扫码或选照片</string>
 
     <string name="title_pref_append_http_proxy">追加 HTTP 代理至 VPN</string>
     <string name="summary_pref_append_http_proxy">浏览器 / 一些支持的应用 将直接使用 HTTP 代理, 而不经过虚拟网卡设备 (Android 10+)</string>
@@ -315,6 +316,7 @@
     <string name="sub_setting_pre_profile_tip">请确保配置别名存在并唯一</string>
     <string name="toast_invalid_update_interval">更新间隔无效，最小值为 15 分钟。</string>
     <string name="title_sub_update">更新订阅</string>
+    <string name="title_ping_all_server">测试配置 Tcping</string>
     <string name="title_real_ping_all_server">测试配置真连接</string>
     <string name="title_user_asset_setting">资源文件</string>
     <string name="title_sort_by_test_results">按测试结果排序</string>
@@ -401,6 +403,8 @@
     <string name="title_policy_group_type">策略组类型</string>
     <string name="title_policy_group_subscription_id">来自订阅分组</string>
     <string name="title_policy_group_subscription_filter">别名正则过滤</string>
+    <string name="title_policy_group_test_outbounds">测试出站</string>
+    <string name="title_policy_group_fallback">备用出站（可选）</string>
     <string name="server_proxy_chain_members">代理链成员</string>
     <string name="server_proxy_chain_pick_members">点此选择成员</string>
     <string name="server_proxy_chain_member_unselected">请选择成员</string>

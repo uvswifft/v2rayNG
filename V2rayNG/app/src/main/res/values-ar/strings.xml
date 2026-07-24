@@ -243,8 +243,6 @@
     <string name="title_pref_confirm_remove">تأكيد حذف ملف التكوين</string>
     <string name="summary_pref_confirm_remove">ما إذا كان حذف ملف التكوين يتطلب تأكيدًا ثانيًا من قبل المستخدم</string>
 
-    <string name="title_pref_start_scan_immediate">بدء المسح الضوئي على الفور</string>
-    <string name="summary_pref_start_scan_immediate">افتح الكاميرا لمسح الرمز ضوئيًا على الفور عند بدء التشغيل، وإلا يمكنك اختيار مسح الرمز ضوئيًا أو تحديد صورة في شريط الأدوات</string>
 
     <string name="title_pref_append_http_proxy">Append HTTP Proxy to VPN</string>
     <string name="summary_pref_append_http_proxy">HTTP proxy will be used directly from (browser/ some supported apps), without going through the virtual NIC device (Android 10+)</string>
@@ -306,6 +304,7 @@
     <string name="sub_setting_pre_profile_tip">The configuration remarks exists and is unique</string>
     <string name="toast_invalid_update_interval">فاصل التحديث غير صالح. الحد الأدنى هو 15 دقيقة.</string>
     <string name="title_sub_update">تحديث الاشتراك (أول خطوة)</string>
+    <string name="title_ping_all_server">Tcping لجميع الإعدادات</string>
     <string name="title_real_ping_all_server"> اختبر جميع الإعدادات (3)</string>
     <string name="title_user_asset_setting">Asset files</string>
     <string name="title_sort_by_test_results">الفرز حسب نتائج الاختبار (5)</string>
@@ -389,6 +388,8 @@
     <string name="title_policy_group_type">Policy group type</string>
     <string name="title_policy_group_subscription_id">From subscription group</string>
     <string name="title_policy_group_subscription_filter">Remarks regular filter</string>
+    <string name="title_policy_group_test_outbounds">اختبار المخارج</string>
+    <string name="title_policy_group_fallback">المخرج الاحتياطي (اختياري)</string>
     <string name="server_proxy_chain_members">اعضاء سلسلة الوكيل</string>
     <string name="server_proxy_chain_pick_members">اضغط هنا لاختيار عضو</string>
     <string name="server_proxy_chain_member_unselected">اختر عضوا</string>
